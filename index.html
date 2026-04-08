@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Safe Cleaning</title>
+    <style>
+        :root {
+            --cleaner-blue: #55c2ff;
+            --cleaner-cyan: #16e0ff;
+            --cleaner-night: #08111d;
+            --cleaner-surface: #101c2b;
+            --cleaner-surface-soft: #142436;
+            --cleaner-border: rgba(122, 197, 255, 0.18);
+            --text-primary: #eef6ff;
+            --text-secondary: #abc0de;
+            --text-tertiary: #7188a8;
+            --success: #4fd98f;
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.09);
+            --shadow-glow: 0 20px 60px rgba(22, 224, 255, 0.14);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Aptos", "Segoe UI Variable", "Trebuchet MS", sans-serif;
+            background:
+                radial-gradient(circle at 15% 18%, rgba(85, 194, 255, 0.16), transparent 28%),
+                radial-gradient(circle at 82% 30%, rgba(22, 224, 255, 0.11), transparent 24%),
+                linear-gradient(180deg, #08111d 0%, #0c1724 50%, #09121d 100%);
+            color: var(--text-primary);
+            line-height: 1.72;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                var(--cleaner-blue) 22%,
+                var(--cleaner-cyan) 50%,
+                var(--cleaner-blue) 78%,
+                transparent 100%
+            );
+            opacity: 0.75;
+            animation: sweep 4.2s linear infinite;
+            z-index: 1000;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(85, 194, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(85, 194, 255, 0.035) 1px, transparent 1px);
+            background-size: 64px 64px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes sweep {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 112px 0 72px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 34px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .logo-icon {
+            width: 118px;
+            height: 118px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(85, 194, 255, 0.95), rgba(22, 224, 255, 0.92));
+            color: #07111c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Bahnschrift", "Arial Nova", sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            transform: rotate(-4deg);
+            box-shadow:
+                0 24px 60px rgba(85, 194, 255, 0.28),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .logo-icon::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: 32px;
+            background: linear-gradient(135deg, rgba(85, 194, 255, 0.5), rgba(22, 224, 255, 0.05));
+            z-index: -1;
+            filter: blur(10px);
+        }
+
+        .logo-icon::after {
+            content: "";
+            position: absolute;
+            left: -18%;
+            right: -18%;
+            top: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent);
+            opacity: 0.65;
+            animation: scan 2.4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: rotate(-4deg) translateY(0);
+            }
+            50% {
+                transform: rotate(-4deg) translateY(-10px);
+            }
+        }
+
+        @keyframes scan {
+            0% {
+                transform: translateY(-58px);
+                opacity: 0;
+            }
+            45% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(58px);
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            font-family: "Bahnschrift", "Arial Nova", sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 14px;
+            background: linear-gradient(
+                135deg,
+                #f6fbff 0%,
+                var(--cleaner-blue) 48%,
+                var(--cleaner-cyan) 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.22rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 26px;
+            border-radius: 999px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(18px);
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .last-updated::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .last-updated-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--success);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(0.9);
+            }
+        }
+
+        .intro-card,
+        .contact-box,
+        .policy-section {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(18px);
+        }
+
+        .intro-card {
+            border-radius: 26px;
+            padding: 44px;
+            margin-bottom: 56px;
+            box-shadow: var(--shadow-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--cleaner-blue),
+                var(--cleaner-cyan),
+                transparent
+            );
+        }
+
+        .intro-card p {
+            font-size: 1.04rem;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+        }
+
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro-card strong,
+        .section-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            margin-top: 24px;
+            padding: 20px 24px;
+            border-radius: 14px;
+            background: rgba(85, 194, 255, 0.1);
+            border-left: 3px solid var(--cleaner-blue);
+        }
+
+        .policy-section {
+            border-radius: 20px;
+            margin-bottom: 22px;
+            overflow: hidden;
+            transition: transform 0.28s ease, border-color 0.28s ease;
+        }
+
+        .policy-section:hover {
+            transform: translateX(4px);
+            border-color: rgba(85, 194, 255, 0.32);
+        }
+
+        details {
+            width: 100%;
+        }
+
+        summary {
+            list-style: none;
+            cursor: pointer;
+            user-select: none;
+            padding: 30px 30px 30px 34px;
+            font-family: "Bahnschrift", "Arial Nova", sans-serif;
+            font-size: 1.28rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            position: relative;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--cleaner-blue), var(--cleaner-cyan));
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::before {
+            transform: scaleY(1);
+        }
+
+        .summary-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: rgba(85, 194, 255, 0.12);
+            color: var(--cleaner-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.08rem;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            flex: 0 0 auto;
+        }
+
+        details[open] .summary-icon {
+            background: linear-gradient(135deg, var(--cleaner-blue), var(--cleaner-cyan));
+            color: #07111c;
+            transform: rotate(180deg);
+        }
+
+        .section-content {
+            padding: 0 32px 32px;
+            color: var(--text-secondary);
+            animation: reveal 0.36s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(-18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.12rem;
+            margin: 28px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h3:first-child {
+            margin-top: 0;
+        }
+
+        h3::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            border-radius: 2px;
+            background: linear-gradient(180deg, var(--cleaner-blue), var(--cleaner-cyan));
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 14px 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--cleaner-blue);
+            box-shadow: 0 0 8px var(--cleaner-blue);
+        }
+
+        a {
+            color: var(--cleaner-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: var(--cleaner-cyan);
+            transition: width 0.28s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        em {
+            display: block;
+            padding: 16px 18px;
+            margin-top: 16px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.025);
+            border-left: 2px solid rgba(85, 194, 255, 0.3);
+            color: var(--text-tertiary);
+            font-style: italic;
+        }
+
+        .contact-box {
+            margin: 74px 0;
+            padding: 56px;
+            border-radius: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(85, 194, 255, 0.18), rgba(22, 224, 255, 0.08)),
+                var(--glass-bg);
+        }
+
+        .contact-box::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(22, 224, 255, 0.1) 0%, transparent 70%);
+            animation: spin 16s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .contact-box h3 {
+            font-family: "Bahnschrift", "Arial Nova", sans-serif;
+            font-size: 2rem;
+            margin: 0 0 14px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .contact-box h3::before {
+            display: none;
+        }
+
+        .contact-box p {
+            color: var(--text-secondary);
+            font-size: 1.08rem;
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 17px 38px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--cleaner-blue), var(--cleaner-cyan));
+            color: #07111c;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 14px 42px rgba(85, 194, 255, 0.26);
+            position: relative;
+            z-index: 2;
+            transition: transform 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        .contact-btn::after {
+            content: "->";
+            transition: transform 0.28s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 22px 62px rgba(22, 224, 255, 0.3);
+        }
+
+        .contact-btn:hover::after {
+            transform: translateX(4px);
+        }
+
+        footer {
+            margin-top: 56px;
+            padding: 56px 0 36px;
+            text-align: center;
+            color: var(--text-tertiary);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.94rem;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        ::selection {
+            background: var(--cleaner-blue);
+            color: #07111c;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 84px 0 56px;
+            }
+
+            .logo-icon {
+                width: 94px;
+                height: 94px;
+                font-size: 1.8rem;
+            }
+
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            .intro-card,
+            .contact-box {
+                padding: 30px 24px;
+            }
+
+            summary {
+                padding: 24px 22px 24px 28px;
+                font-size: 1.1rem;
+            }
+
+            .section-content {
+                padding: 0 24px 24px;
+            }
+
+            .contact-box h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            h1 {
+                font-size: 1.95rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .last-updated {
+                padding: 11px 18px;
+                font-size: 0.84rem;
+            }
+
+            .intro-card {
+                padding: 26px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo-icon">SC</div>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Safe Cleaning</p>
+            <div class="last-updated">
+                <span class="last-updated-icon"></span>
+                <span>Last Updated: <strong>April 8, 2026</strong></span>
+            </div>
+        </header>
+
+        <div class="intro-card">
+            <p>
+                As <strong>BulkarApp</strong>, we respect the privacy of every user of
+                <strong>Safe Cleaning</strong>. Safe Cleaning is an Android utility focused on
+                local cache cleanup, device visibility, and system shortcuts. This privacy policy
+                explains what information the app processes, how it is used, and how it is protected.
+            </p>
+
+            <div class="highlight-box">
+                <p style="margin: 0;">
+                    <strong>Important:</strong> Safe Cleaning is designed to work locally on your
+                    device. Cleanup history, settings, and runtime status stay on-device. The app
+                    does not upload your personal files to our servers.
+                </p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <details open>
+                <summary>
+                    1. Information We Process
+                    <div class="summary-icon">v</div>
+                </summary>
+                <div class="section-content">
+                    <p>
+                        We design Safe Cleaning to process the minimum information necessary to
+                        operate. In the current release, most information is handled entirely on
+                        your device.
+                    </p>
+
+                    <h3>1.1. Device Signals Processed On-Device</h3>
+                    <ul>
+                        <li>
+                            <strong>Storage and cleanup data:</strong> total storage, free storage,
+                            app-accessible cache size, deleted file counts, and cleanup history.
+                        </li>
+                        <li>
+                            <strong>Device status signals:</strong> available RAM, battery level,
+                            battery temperature, and power-saver state.
+                        </li>
+                        <li>
+                            <strong>Security screen signals:</strong> screen lock status,
+                            developer-options state, USB debugging state, and whether unknown app
+                            installs are allowed for the app when Android makes that information
+                            available.
+                        </li>
+                    </ul>
+
+                    <h3>1.2. Local App Data</h3>
+                    <ul>
+                        <li>
+                            <strong>Preferences:</strong> theme mode, language, onboarding status,
+                            and automatic cleanup options.
+                        </li>
+                        <li>
+                            <strong>Operational records:</strong> local cleanup history, recent app
+                            status events, and automatic cleanup runtime state may be stored in
+                            local SQLite/app storage on the device.
+                        </li>
+                    </ul>
+
+                    <h3>1.3. Information You Provide</h3>
+                    <ul>
+                        <li>
+                            If you contact us by email, we use your email address only to answer
+                            your support request.
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section">
+            <details>
+                <summary>
+                    2. Permissions and Device Access
+                    <div class="summary-icon">v</div>
+                </summary>
+                <div class="section-content">
+                    <p>
+                        Safe Cleaning keeps permissions narrow. In the current release, the app
+                        declares only the permission below:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>Notifications:</strong> On Android 13 and later,
+                            <code>POST_NOTIFICATIONS</code> is requested only if you enable
+                            automatic cleanup notifications and want completion alerts.
+                        </li>
+                    </ul>
+
+                    <p>The app may also use Android system APIs and device access in these ways:</p>
+
+                    <ul>
+                        <li>
+                            <strong>Local cleanup access:</strong> the app only cleans files inside
+                            app-accessible cache, code-cache, and related temporary directories it
+                            can safely reach under Android sandbox rules.
+                        </li>
+                        <li>
+                            <strong>System settings shortcuts:</strong> the app can open Android
+                            storage, security, or developer settings screens when you tap those
+                            actions.
+                        </li>
+                    </ul>
+
+                    <em>
+                        Safe Cleaning does not request camera, microphone, contacts, location,
+                        SMS, advertising ID, photo gallery, or broad storage/media permissions in
+                        the current release.
+                    </em>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section">
+            <details>
+                <summary>
+                    3. How We Use Information
+                    <div class="summary-icon">v</div>
+                </summary>
+                <div class="section-content">
+                    <p>Information processed by the app is used only to operate app features such as:</p>
+
+                    <ul>
+                        <li>Displaying storage, RAM, battery, and security-related device signals.</li>
+                        <li>Running manual cleanup and optional automatic cleanup tasks.</li>
+                        <li>Saving your cleanup history and app preferences locally on the device.</li>
+                        <li>Showing optional completion notifications for automatic cleanup.</li>
+                        <li>Recording local status or error information to improve stability during use.</li>
+                    </ul>
+
+                    <p>
+                        We do <strong>not</strong> sell your data. We do <strong>not</strong> build
+                        advertising profiles. We do <strong>not</strong> upload your cleanup history
+                        or device signals to our own servers in the current release.
+                    </p>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section">
+            <details>
+                <summary>
+                    4. Third-Party Services
+                    <div class="summary-icon">v</div>
+                </summary>
+                <div class="section-content">
+                    <p>
+                        Safe Cleaning does not include ads, cloud sync, or remote analytics services
+                        in the current release.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>Google Play:</strong> if you download the app through Google
+                            Play, Google may process store, install, payment, or device data under
+                            Google's own policies.
+                        </li>
+                        <li>
+                            <strong>Android system services:</strong> notifications, WorkManager,
+                            and device settings screens are handled through Android platform
+                            components on your device.
+                        </li>
+                    </ul>
+
+                    <p>
+                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+                            Review Google's Privacy Policy ->
+                        </a>
+                    </p>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section">
+            <details>
+                <summary>
+                    5. Data Security and Backup
+                    <div class="summary-icon">v</div>
+                </summary>
+                <div class="section-content">
+                    <p>
+                        Safe Cleaning stores operational data locally inside app storage on your
+                        device. This may include preferences, cleanup history, runtime state, and
+                        local app event logs.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>Local-first storage:</strong> app data is kept in app-local
+                            storage/SQLite and is not intentionally transmitted to our servers.
+                        </li>
+                        <li>
+                            <strong>Android sandbox protection:</strong> app data is protected by
+                            Android's application sandbox and the lock-screen/device security
+                            settings you choose.
+                        </li>
+                        <li>
+                            <strong>System backup note:</strong> if Android backup is enabled on
+                            your device, some app data may be included in system-managed backups
+                            according to your device and Google account settings.
+                        </li>
+                    </ul>
+
+                    <em>
+                        No method of electronic storage is perfectly secure, so we encourage you to
+                        use device lock-screen protection and keep your Android system updated.
+                    </em>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section">
+            <details>
+                <summary>
+                    6. Children's Privacy
+                    <div class="summary-icon">v</div>
+                </summary>
+                <div class="section-content">
+                    <p>
+                        Safe Cleaning is intended for a general audience. We do not knowingly
+                        collect personal information from children under 13 through our own servers.
+                        If you believe a child has sent us personal information by email, contact us
+                        and we will handle the request promptly.
+                    </p>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section">
+            <details>
+                <summary>
+                    7. Your Rights and Choices
+                    <div class="summary-icon">v</div>
+                </summary>
+                <div class="section-content">
+                    <p>
+                        Depending on your region, you may have rights under laws such as GDPR or
+                        CCPA. Because Safe Cleaning is local-first, many privacy controls are
+                        available directly on your device:
+                    </p>
+
+                    <ul>
+                        <li>Disable optional notifications from the app or Android settings.</li>
+                        <li>Change or remove theme, language, and automatic cleanup preferences.</li>
+                        <li>Clear app data from Android settings to remove local records.</li>
+                        <li>Uninstall the app to remove its local storage from the device.</li>
+                        <li>Contact us if you have questions about how the app handles data.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section">
+            <details>
+                <summary>
+                    8. Data Retention and Deletion
+                    <div class="summary-icon">v</div>
+                </summary>
+                <div class="section-content">
+                    <p>
+                        Safe Cleaning keeps local operational data until you remove it, clear app
+                        data, or uninstall the app.
+                    </p>
+
+                    <ul>
+                        <li>
+                            Cleanup history and app preferences remain on the device until removed.
+                        </li>
+                        <li>
+                            Automatic cleanup runtime records and local app events may also remain
+                            on-device for operational status visibility.
+                        </li>
+                        <li>
+                            If you uninstall the app, Android normally removes the app's local data
+                            from the device, subject to any device-managed backup behavior described above.
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="contact-box">
+            <h3>Have Questions?</h3>
+            <p>
+                For questions about this privacy policy or Safe Cleaning, you can contact us by email.
+            </p>
+            <a href="mailto:appnovastudio2@gmail.com" class="contact-btn">appnovastudio2@gmail.com</a>
+        </div>
+
+        <footer>
+            <p>&copy; <span id="year"></span> BulkarApp. All rights reserved.</p>
+            <p>Safe Cleaning</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var firstDetails = document.querySelector("details");
+            if (firstDetails) {
+                firstDetails.setAttribute("open", "");
+            }
+        });
+    </script>
+</body>
+</html>
