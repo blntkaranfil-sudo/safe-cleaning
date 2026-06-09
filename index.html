@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,12 +78,8 @@
         }
 
         @keyframes sweep {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(100%);
-            }
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
 
         .container {
@@ -149,26 +146,14 @@
         }
 
         @keyframes float {
-            0%, 100% {
-                transform: rotate(-4deg) translateY(0);
-            }
-            50% {
-                transform: rotate(-4deg) translateY(-10px);
-            }
+            0%, 100% { transform: rotate(-4deg) translateY(0); }
+            50% { transform: rotate(-4deg) translateY(-10px); }
         }
 
         @keyframes scan {
-            0% {
-                transform: translateY(-58px);
-                opacity: 0;
-            }
-            45% {
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(58px);
-                opacity: 0;
-            }
+            0% { transform: translateY(-58px); opacity: 0; }
+            45% { opacity: 0.7; }
+            100% { transform: translateY(58px); opacity: 0; }
         }
 
         h1 {
@@ -178,12 +163,7 @@
             line-height: 1.08;
             letter-spacing: -0.03em;
             margin-bottom: 14px;
-            background: linear-gradient(
-                135deg,
-                #f6fbff 0%,
-                var(--cleaner-blue) 48%,
-                var(--cleaner-cyan) 100%
-            );
+            background: linear-gradient(135deg, #f6fbff 0%, var(--cleaner-blue) 48%, var(--cleaner-cyan) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -222,12 +202,8 @@
         }
 
         @keyframes shimmer {
-            0% {
-                left: -100%;
-            }
-            100% {
-                left: 100%;
-            }
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
 
         .last-updated-icon {
@@ -240,14 +216,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.6;
-                transform: scale(0.9);
-            }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.9); }
         }
 
         .intro-card,
@@ -274,13 +244,7 @@
             right: 0;
             top: 0;
             height: 1px;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                var(--cleaner-blue),
-                var(--cleaner-cyan),
-                transparent
-            );
+            background: linear-gradient(90deg, transparent, var(--cleaner-blue), var(--cleaner-cyan), transparent);
         }
 
         .intro-card p {
@@ -386,14 +350,8 @@
         }
 
         @keyframes reveal {
-            from {
-                opacity: 0;
-                transform: translateY(-18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-18px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h3 {
@@ -481,6 +439,13 @@
             font-style: italic;
         }
 
+        code {
+            color: var(--cleaner-cyan);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+
         .contact-box {
             margin: 74px 0;
             padding: 56px;
@@ -505,12 +470,8 @@
         }
 
         @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .contact-box h3 {
@@ -582,9 +543,7 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                padding: 84px 0 56px;
-            }
+            header { padding: 84px 0 56px; }
 
             .logo-icon {
                 width: 94px;
@@ -592,9 +551,7 @@
                 font-size: 1.8rem;
             }
 
-            h1 {
-                font-size: 2.3rem;
-            }
+            h1 { font-size: 2.3rem; }
 
             .intro-card,
             .contact-box {
@@ -616,17 +573,11 @@
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
+            .container { padding: 0 16px; }
 
-            h1 {
-                font-size: 1.95rem;
-            }
+            h1 { font-size: 1.95rem; }
 
-            .subtitle {
-                font-size: 1rem;
-            }
+            .subtitle { font-size: 1rem; }
 
             .last-updated {
                 padding: 11px 18px;
@@ -649,7 +600,7 @@
             <p class="subtitle">Safe Cleaning</p>
             <div class="last-updated">
                 <span class="last-updated-icon"></span>
-                <span>Last Updated: <strong>April 8, 2026</strong></span>
+                <span>Last Updated: <strong>June 10, 2026</strong></span>
             </div>
         </header>
 
@@ -657,15 +608,17 @@
             <p>
                 As <strong>BulkarApp</strong>, we respect the privacy of every user of
                 <strong>Safe Cleaning</strong>. Safe Cleaning is an Android utility focused on
-                local cache cleanup, device visibility, and system shortcuts. This privacy policy
-                explains what information the app processes, how it is used, and how it is protected.
+                local cleanup, storage visibility, media management, and system shortcuts. This
+                privacy policy explains what information the app processes, how it is used, and
+                how it is protected.
             </p>
 
             <div class="highlight-box">
                 <p style="margin: 0;">
                     <strong>Important:</strong> Safe Cleaning is designed to work locally on your
-                    device. Cleanup history, settings, and runtime status stay on-device. The app
-                    does not upload your personal files to our servers.
+                    device. Cleanup history, settings, file scan results, and runtime status stay
+                    on-device. The app does not upload your personal files, photos, videos, audio,
+                    contacts, or cleanup history to our servers.
                 </p>
             </div>
         </div>
@@ -687,11 +640,12 @@
                     <ul>
                         <li>
                             <strong>Storage and cleanup data:</strong> total storage, free storage,
-                            app-accessible cache size, deleted file counts, and cleanup history.
+                            app-accessible cache size, file scan results, selected cleanup items,
+                            deleted file counts, and cleanup history.
                         </li>
                         <li>
                             <strong>Device status signals:</strong> available RAM, battery level,
-                            battery temperature, and power-saver state.
+                            battery temperature, charging state, and power-saver state.
                         </li>
                         <li>
                             <strong>Security screen signals:</strong> screen lock status,
@@ -701,7 +655,26 @@
                         </li>
                     </ul>
 
-                    <h3>1.2. Local App Data</h3>
+                    <h3>1.2. Local File, Media, and Contact Data</h3>
+                    <ul>
+                        <li>
+                            <strong>Files and folders:</strong> file names, paths, sizes, and file
+                            types may be processed locally to detect leftover APK files, empty folders,
+                            large files, duplicate files, and accessible storage residue.
+                        </li>
+                        <li>
+                            <strong>Photos, videos, and audio:</strong> media names, sizes, dates,
+                            thumbnails, and content references may be processed locally when you use
+                            photo, video, audio, duplicate media, or photo size reduction tools.
+                        </li>
+                        <li>
+                            <strong>Contacts:</strong> contact names, phone numbers, and related
+                            contact fields may be processed locally when you use duplicate contact
+                            tools or contact cleanup actions.
+                        </li>
+                    </ul>
+
+                    <h3>1.3. Local App Data</h3>
                     <ul>
                         <li>
                             <strong>Preferences:</strong> theme mode, language, onboarding status,
@@ -714,7 +687,7 @@
                         </li>
                     </ul>
 
-                    <h3>1.3. Information You Provide</h3>
+                    <h3>1.4. Information You Provide</h3>
                     <ul>
                         <li>
                             If you contact us by email, we use your email address only to answer
@@ -733,15 +706,35 @@
                 </summary>
                 <div class="section-content">
                     <p>
-                        Safe Cleaning keeps permissions narrow. In the current release, the app
-                        declares only the permission below:
+                        Safe Cleaning requests permissions only when they are needed for a feature you use.
+                        Some features work without extra permissions, while storage, media, contact, or
+                        notification features may require Android permission approval.
                     </p>
 
                     <ul>
                         <li>
-                            <strong>Notifications:</strong> On Android 13 and later,
-                            <code>POST_NOTIFICATIONS</code> is requested only if you enable
-                            automatic cleanup notifications and want completion alerts.
+                            <strong>All files access:</strong> <code>MANAGE_EXTERNAL_STORAGE</code> may be
+                            requested to scan shared storage for leftover APK/APKS/XAPK files, empty folders,
+                            large files, duplicate files, and accessible file residue. This permission is used
+                            for the app's core cleanup function and files are removed only after user action.
+                        </li>
+                        <li>
+                            <strong>Media access:</strong> image, video, and audio permissions may be used to
+                            show media files, find duplicates, reduce photo size, and help you manage selected
+                            media on your device.
+                        </li>
+                        <li>
+                            <strong>Contacts access:</strong> if you open the contacts tool, contacts permission
+                            may be used to find duplicate contacts or apply user-selected contact changes. Contact
+                            data is processed locally and is not uploaded to our servers.
+                        </li>
+                        <li>
+                            <strong>Notifications:</strong> on Android 13 and later, <code>POST_NOTIFICATIONS</code>
+                            may be requested for cleanup completion alerts and app status notifications.
+                        </li>
+                        <li>
+                            <strong>Usage access:</strong> if Android usage access is enabled by the user, the app
+                            may use app usage information to show app details and device management information.
                         </li>
                     </ul>
 
@@ -749,21 +742,23 @@
 
                     <ul>
                         <li>
-                            <strong>Local cleanup access:</strong> the app only cleans files inside
-                            app-accessible cache, code-cache, and related temporary directories it
-                            can safely reach under Android sandbox rules.
+                            <strong>Local cleanup access:</strong> the app scans app-accessible cache, code-cache,
+                            temporary files, empty folders, leftover APK files, and related storage residue that it
+                            can reach under Android rules.
                         </li>
                         <li>
-                            <strong>System settings shortcuts:</strong> the app can open Android
-                            storage, security, or developer settings screens when you tap those
-                            actions.
+                            <strong>System settings shortcuts:</strong> the app can open Android storage, security,
+                            usage access, notification, or app settings screens when you tap those actions.
+                        </li>
+                        <li>
+                            <strong>Network state:</strong> network status may be checked to support app services
+                            such as loading ads and avoiding unnecessary network requests.
                         </li>
                     </ul>
 
                     <em>
-                        Safe Cleaning does not request camera, microphone, contacts, location,
-                        SMS, advertising ID, photo gallery, or broad storage/media permissions in
-                        the current release.
+                        Safe Cleaning does not request camera, microphone, location, SMS, or call log permissions.
+                        File, media, and contact access is used only for the related tools selected by the user.
                     </em>
                 </div>
             </details>
@@ -779,17 +774,21 @@
                     <p>Information processed by the app is used only to operate app features such as:</p>
 
                     <ul>
-                        <li>Displaying storage, RAM, battery, and security-related device signals.</li>
+                        <li>Displaying storage, RAM, battery, app, and security-related device signals.</li>
+                        <li>Scanning for app-accessible cache, leftover APK files, empty folders, large files, and file residue.</li>
+                        <li>Finding duplicate files, duplicate photos, duplicate media, and duplicate contacts when the related tools are used.</li>
+                        <li>Reducing photo size and saving the optimized copy on the device.</li>
                         <li>Running manual cleanup and optional automatic cleanup tasks.</li>
                         <li>Saving your cleanup history and app preferences locally on the device.</li>
-                        <li>Showing optional completion notifications for automatic cleanup.</li>
-                        <li>Recording local status or error information to improve stability during use.</li>
+                        <li>Showing optional completion notifications for cleanup or app status events.</li>
+                        <li>Loading ads and limiting repeated ad display through third-party advertising services.</li>
                     </ul>
 
                     <p>
-                        We do <strong>not</strong> sell your data. We do <strong>not</strong> build
-                        advertising profiles. We do <strong>not</strong> upload your cleanup history
-                        or device signals to our own servers in the current release.
+                        We do <strong>not</strong> sell your personal data. We do <strong>not</strong> upload
+                        your personal files, media, contacts, cleanup history, or device scan results to our own
+                        servers. Advertising services may process limited device, ad, and interaction data under
+                        their own policies.
                     </p>
                 </div>
             </details>
@@ -803,20 +802,25 @@
                 </summary>
                 <div class="section-content">
                     <p>
-                        Safe Cleaning does not include ads, cloud sync, or remote analytics services
-                        in the current release.
+                        Safe Cleaning may use third-party services for app distribution and advertising. The app
+                        does not use cloud sync for your cleanup history, file lists, media files, or contacts.
                     </p>
 
                     <ul>
                         <li>
-                            <strong>Google Play:</strong> if you download the app through Google
-                            Play, Google may process store, install, payment, or device data under
-                            Google's own policies.
+                            <strong>Google Play:</strong> if you download the app through Google Play, Google may
+                            process store, install, payment, or device data under Google's own policies.
                         </li>
                         <li>
-                            <strong>Android system services:</strong> notifications, WorkManager,
-                            and device settings screens are handled through Android platform
-                            components on your device.
+                            <strong>Google AdMob / Google Mobile Ads:</strong> the app may show banner, native,
+                            app open, or interstitial ads. Google may process advertising identifiers, device
+                            information, network information, ad requests, impressions, clicks, and related ad
+                            performance data according to Google's policies.
+                        </li>
+                        <li>
+                            <strong>Android system services:</strong> notifications, WorkManager, media permissions,
+                            contact permissions, storage access, and device settings screens are handled through
+                            Android platform components on your device.
                         </li>
                     </ul>
 
@@ -899,8 +903,10 @@
 
                     <ul>
                         <li>Disable optional notifications from the app or Android settings.</li>
+                        <li>Turn off all files access, media permissions, contacts permission, or usage access from Android settings.</li>
                         <li>Change or remove theme, language, and automatic cleanup preferences.</li>
                         <li>Clear app data from Android settings to remove local records.</li>
+                        <li>Use Google settings to manage advertising choices where available.</li>
                         <li>Uninstall the app to remove its local storage from the device.</li>
                         <li>Contact us if you have questions about how the app handles data.</li>
                     </ul>
@@ -925,8 +931,8 @@
                             Cleanup history and app preferences remain on the device until removed.
                         </li>
                         <li>
-                            Automatic cleanup runtime records and local app events may also remain
-                            on-device for operational status visibility.
+                            Scan results, selected cleanup items, temporary app events, and automatic
+                            cleanup runtime records may remain on-device for operational status visibility.
                         </li>
                         <li>
                             If you uninstall the app, Android normally removes the app's local data
@@ -963,3 +969,4 @@
     </script>
 </body>
 </html>
+```
